@@ -33,7 +33,6 @@ nav_links:
   - title: Blog
     url: /blog/
 
-
 # Additional plugins (optional)
 plugins:
   - jekyll-feed
@@ -50,6 +49,6 @@ exclude:
   - vendor/bundle/
 
 # Build settings
-remote_theme: "pages-themes/minimal@v0.2.0" # Replace with any remote theme if needed
+# Removed remote_theme to avoid conflict
 github:
   is_project_page: true
