@@ -1,3 +1,55 @@
+# Site settings
 title: x-stats
+description: "An attempt to becoming an x-pert in football data analytics"
 author: Ushnik Mukherjee
+email: mukherjee.ushnik@gmail.com
+url: "https://u3mukher.github.io/x-stats/" # Update this with your GitHub Pages URL
+
+# Theme and appearance
 theme: minima
+minima:
+  skin: solarized
+  social_links:
+    github: u3mukher
+
+# SEO and analytics (optional)
+timezone: America/Toronto # Replace with your timezone
+lang: en # Replace with your preferred language
+
+# Markdown and content settings
+markdown: kramdown
+highlighter: rouge
+
+# Navigation bar
+nav_links:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Projects
+    url: /projects/
+  - title: Contact
+    url: /contact/
+  - title: Blog
+    url: /blog/
+
+
+# Additional plugins (optional)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-archives
+
+# Exclusions (optional)
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+
+# Build settings
+remote_theme: "pages-themes/minimal@v0.2.0" # Replace with any remote theme if needed
+github:
+  is_project_page: true
