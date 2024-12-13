@@ -1,1 +1,37 @@
+---
+layout: default
+---
+<header class="site-header">
+  <div class="header-left">
+    <h1 style="font-weight: bold; color: black;">x-stats</h1>
+    <p style="font-style: italic;">An attempt at becoming an x-pert in football data analytics</p>
+  </div>
+  <div class="header-right">
+    <nav class="site-nav">
+      <ul>
+        {% for link in site.nav_links %}
+          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="latest-posts">
+    <h2>Latest Blog Posts</h2>
+    <div class="posts-container">
+      {% for post in site.posts limit:5 %}
+        <article class="post">
+          {% if post.image %}
+            <img src="{{ post.image }}" alt="{{ post.title }}" class="post-image">
+          {% endif %}
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
+          <p>{{ post.excerpt }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+</main>
 
