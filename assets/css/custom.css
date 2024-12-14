@@ -1,5 +1,15 @@
 /* assets/css/custom.css */
 
+/* Apply Roboto font to the entire site */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Optional: Adjust headings if necessary */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
 /* Header Styling */
 .site-header {
   background-color: #ffffff;
