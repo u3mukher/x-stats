@@ -1,11 +1,8 @@
 ---
-title: 
+title: About
 layout: page
 permalink: /about/
 ---
-
-# About
-
 ![Profile Picture](/assets/images/profile.png)
 
 Hi, welcome to x-stats!
