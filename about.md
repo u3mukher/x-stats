@@ -6,6 +6,8 @@ permalink: /about/
 
 # About
 
+![Profile Picture](/assets/images/profile.png)
+
 Hi, welcome to x-stats!
 
 My name is Ushnik Mukherjee, and I'm a football enthusiast with a passion for data. Screaming at the TV wasn’t cutting it anymore, so I started Expected Stats—because in modern football, if it’s not “expected,” is it even real?
