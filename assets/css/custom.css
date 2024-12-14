@@ -10,14 +10,21 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto', sans-serif;
 }
 
+/* assets/css/custom.css */
+
 /* Header Styling */
 .site-header {
   background-color: #ffffff;
   border-bottom: 1px solid #eaeaea;
   padding: 1em 2em;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Ensures branding on left and nav on right */
   align-items: center;
+}
+
+.site-branding {
+  display: flex;
+  flex-direction: column; /* To stack the title and subtitle vertically */
 }
 
 .site-branding .logo-link {
@@ -34,8 +41,16 @@ h1, h2, h3, h4, h5, h6 {
 .site-branding .site-title {
   font-size: 1.5em;
   color: #333333;
+  margin: 0; /* Remove default margin */
 }
 
+.site-subtitle {
+  font-size: 0.9em;
+  color: #666666;
+  margin-top: 0.25em; /* Small space above subtitle */
+}
+
+/* Navigation Styling */
 .site-nav ul {
   list-style: none;
   display: flex;
@@ -47,12 +62,13 @@ h1, h2, h3, h4, h5, h6 {
 .site-nav a {
   text-decoration: none;
   color: #333333;
-  font-weight: bold;
+  font-weight: normal; /* Remove boldness */
 }
 
 .site-nav a:hover {
   color: #007acc;
 }
+
 
 /* Footer Styling */
 .site-footer {
