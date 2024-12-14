@@ -44,10 +44,12 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0; /* Remove default margin */
 }
 
+/* Subtitle Styling */
 .site-subtitle {
   font-size: 0.9em;
-  color: #666666;
-  margin-top: 0.25em; /* Small space above subtitle */
+  color: #666666; /* A slightly lighter color for the subtitle */
+  margin-top: 0.25em; /* Adds space between the title and subtitle */
+  font-weight: normal; /* Ensures the subtitle is not bold */
 }
 
 /* Navigation Styling */
