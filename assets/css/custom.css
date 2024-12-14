@@ -10,21 +10,27 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto', sans-serif;
 }
 
-/* assets/css/custom.css */
-
 /* Header Styling */
 .site-header {
   background-color: #ffffff;
   border-bottom: 1px solid #eaeaea;
   padding: 1em 2em;
   display: flex;
-  justify-content: space-between; /* Ensures branding on left and nav on right */
+  justify-content: space-between; /* Distributes space between branding and nav */
   align-items: center;
 }
 
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Site Branding */
 .site-branding {
   display: flex;
-  flex-direction: column; /* To stack the title and subtitle vertically */
+  flex-direction: column; /* Stack title and subtitle vertically */
 }
 
 .site-branding .logo-link {
@@ -44,12 +50,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0; /* Remove default margin */
 }
 
-/* Subtitle Styling */
 .site-subtitle {
   font-size: 0.9em;
-  color: #666666; /* A slightly lighter color for the subtitle */
-  margin-top: 0.25em; /* Adds space between the title and subtitle */
-  font-weight: normal; /* Ensures the subtitle is not bold */
+  color: #666666;
+  margin-top: 0.25em; /* Small space above subtitle */
+  font-weight: normal; /* Ensure the subtitle is not bold */
 }
 
 /* Navigation Styling */
@@ -70,7 +75,6 @@ h1, h2, h3, h4, h5, h6 {
 .site-nav a:hover {
   color: #007acc;
 }
-
 
 /* Footer Styling */
 .site-footer {
@@ -94,56 +98,4 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Latest Posts Styling */
 .latest-posts {
-  padding: 2em;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.latest-posts h2 {
-  text-align: center;
-  margin-bottom: 1em;
-}
-
-.latest-posts ul {
-  list-style: none;
-  padding: 0;
-}
-
-.latest-posts li {
-  margin-bottom: 1em;
-  padding-bottom: 1em;
-  border-bottom: 1px solid #eaeaea;
-}
-
-.latest-posts a {
-  font-size: 1.2em;
-  color: #007acc;
-  text-decoration: none;
-}
-
-.latest-posts a:hover {
-  text-decoration: underline;
-}
-
-.post-date {
-  display: block;
-  font-size: 0.9em;
-  color: #777777;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .site-header, .site-footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .site-nav ul {
-    flex-direction: column;
-    gap: 0.5em;
-  }
-
-  .site-footer {
-    position: static;
-  }
-}
+  padding: 
