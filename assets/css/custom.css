@@ -166,3 +166,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #999999;
   text-align: right;
 }
+/* Centralized Content Layout */
+main {
+  padding: 4em 2em;
+  max-width: 1000px;
+  margin: 0 auto;
+}
