@@ -198,7 +198,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Centralized Content Layout */
 main {
-  padding: 4em 2em; /* Top/Bottom padding and Left/Right padding */
+  padding: 4em 1em; /* Top/Bottom padding and Left/Right padding */
   max-width: 1000px; /* Restricts the width for better readability */
   margin: 0 auto; /* Centers the main content */
 }
