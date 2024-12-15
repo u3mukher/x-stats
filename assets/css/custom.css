@@ -224,3 +224,49 @@ main {
   max-width: 1000px;
   margin: 0 auto;
 }
+
+/* Featured Image Styling */
+.post-featured-image {
+  width: 100%;
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto 2em auto; /* Centers the image and adds bottom margin */
+}
+
+.featured-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+/* Post Content Styling */
+.post-content {
+  padding: 0 1em;
+}
+
+.post-title {
+  font-size: 2em;
+  color: #333333;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.post-subtitle {
+  font-size: 1.2em;
+  color: #555555;
+  font-style: italic;
+  margin-bottom: 1em;
+}
+
+.post-content p {
+  text-align: left;
+  padding-left: 1em; /* Right indent */
+  margin-bottom: 1em;
+}
+
+/* Adjusting for Centralized Layout */
+main {
+  padding: 4em 2em;
+  max-width: 1000px;
+  margin: 0 auto;
+}
