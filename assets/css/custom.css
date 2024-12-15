@@ -31,17 +31,11 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1000;
 }
 
-.wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
 /* Site Branding */
 .site-branding {
   display: flex;
   flex-direction: column; /* Stack title and subtitle vertically */
+  flex: 1; /* Allows site-branding to take available space */
 }
 
 .site-branding .logo-link {
@@ -69,12 +63,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Navigation Styling */
+.site-nav {
+  display: flex;
+  flex: 1; /* Allows navigation to take available space */
+  justify-content: flex-end; /* Aligns navigation items to the right */
+  flex-shrink: 0; /* Prevents navigation from shrinking */
+}
+
 .site-nav ul {
   list-style: none;
   display: flex;
   gap: 1.5em;
   margin: 0;
   padding: 0;
+  flex-wrap: nowrap; /* Prevents navigation items from wrapping */
 }
 
 .site-nav a {
