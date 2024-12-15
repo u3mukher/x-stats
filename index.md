@@ -5,13 +5,16 @@ title: Home
 
 <section class="latest-posts">
   <h2>Latest Blog Posts</h2>
-  <ul>
+  <div class="posts-container">
     {% for post in site.posts limit:5 %}
-      <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
-      </li>
+      <div class="post-item">
+        {% if post.featured_image %}
+          <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title }} Image" class="post-image">
+        {% endif %}
+        <h3 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="post-excerpt">{{ post.excerpt }}</p>
+        <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
+      </div>
     {% endfor %}
-  </ul>
+  </div>
 </section>
-
