@@ -13,6 +13,7 @@ permalink: /blog/
           <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title }} Image" class="post-image">
         {% endif %}
         <h3 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <h4 class="post-subtitle">{{ post.subtitle }}</h4>
         <p class="post-excerpt">{{ post.excerpt }}</p>
         <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
       </div>
