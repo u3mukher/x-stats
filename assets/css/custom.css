@@ -3,10 +3,18 @@
 /* Apply Manrope font to the entire site */
 body {
   font-family: 'Manrope', sans-serif;
+  margin: 0;
+  padding-top: 100px; /* Adjust based on header height */
+  padding-bottom: 60px; /* Adjust based on footer height */
+  line-height: 1.6;
+  color: #333333;
+  background-color: #ffffff;
 }
-/* Optional: Adjust headings if necessary */
+
+/* Ensure all headings use Manrope */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Manrope', sans-serif;
+  margin-bottom: 0.5em;
 }
 
 /* Header Styling */
@@ -17,6 +25,10 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between; /* Distributes space between branding and nav */
   align-items: center;
+  position: fixed; /* Makes the header fixed */
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
 .wrapper {
@@ -138,15 +150,16 @@ h1, h2, h3, h4, h5, h6 {
 .post-image {
   width: 100%;
   height: auto;
-  border-radius: 4px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   margin-bottom: 1em;
 }
 
 .post-title {
-  font-size: 1.5em;
-  margin: 0.5em 0;
+  font-size: 2em;
   color: #333333;
   font-weight: bold;
+  margin-bottom: 0.5em;
 }
 
 .post-title a {
@@ -159,10 +172,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .post-subtitle {
-  font-size: 1em;
+  font-size: 1.2em;
   color: #555555;
-  margin: 0.25em 0 0.5em 0;
   font-style: italic;
+  margin-bottom: 1em;
 }
 
 .post-excerpt {
@@ -183,9 +196,92 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Centralized Content Layout */
 main {
-  padding: 4em 2em;
-  max-width: 1000px;
-  margin: 0 auto;
+  padding: 4em 2em; /* Top/Bottom padding and Left/Right padding */
+  max-width: 1000px; /* Restricts the width for better readability */
+  margin: 0 auto; /* Centers the main content */
+}
+
+/* Featured Image Styling */
+.post-featured-image {
+  width: 100%;
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto 2em auto; /* Centers the image and adds bottom margin */
+}
+
+.featured-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Post Content Styling */
+.post-content {
+  padding: 0 1em; /* Adds left and right padding */
+}
+
+/* Social Links Styling */
+.social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1em;
+}
+
+.social-links li a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  transition: color 0.3s ease;
+}
+
+.social-links li a:hover {
+  color: #007acc;
+}
+
+.social-links li a i {
+  font-size: 1em;
+}
+
+/* Back-to-Top Button Styling */
+.back-to-top {
+  position: fixed;
+  bottom: 80px; /* Adjust as needed */
+  right: 20px;
+  background-color: #007acc;
+  color: #ffffff;
+  padding: 0.5em 0.8em;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: none; /* Hidden by default */
+  transition: background-color 0.3s ease;
+  z-index: 1001;
+}
+
+.back-to-top:hover {
+  background-color: #005fa3;
+}
+
+/* Show the button when scrolled down */
+@media (min-width: 768px) {
+  .back-to-top {
+    display: block;
+  }
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus Styles for Links */
+a:focus, a:hover {
+  outline: 2px solid #007acc;
+  outline-offset: 2px;
 }
 
 /* Responsive Design */
@@ -216,57 +312,4 @@ main {
     padding: 4em 1em;
     max-width: 100%;
   }
-}
-
-/* Centralized Content Layout */
-main {
-  padding: 4em 2em;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* Featured Image Styling */
-.post-featured-image {
-  width: 100%;
-  max-width: 800px; /* Adjust as needed */
-  margin: 0 auto 2em auto; /* Centers the image and adds bottom margin */
-}
-
-.featured-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px; /* Optional: Adds rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
-}
-
-/* Post Content Styling */
-.post-content {
-  padding: 0 1em;
-}
-
-.post-title {
-  font-size: 2em;
-  color: #333333;
-  font-weight: bold;
-  margin-bottom: 0.5em;
-}
-
-.post-subtitle {
-  font-size: 1.2em;
-  color: #555555;
-  font-style: italic;
-  margin-bottom: 1em;
-}
-
-.post-content p {
-  text-align: left;
-  padding-left: 1em; /* Right indent */
-  margin-bottom: 1em;
-}
-
-/* Adjusting for Centralized Layout */
-main {
-  padding: 4em 2em;
-  max-width: 1000px;
-  margin: 0 auto;
 }
