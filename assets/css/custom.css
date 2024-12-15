@@ -1,10 +1,9 @@
 /* assets/css/custom.css */
 
-/* Apply Roboto font to the entire site */
+/* Apply Manrope font to the entire site */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Manrope', sans-serif;
 }
-
 /* Optional: Adjust headings if necessary */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto', sans-serif;
