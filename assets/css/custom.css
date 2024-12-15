@@ -4,9 +4,10 @@
 body {
   font-family: 'Manrope', sans-serif;
 }
-/* Optional: Adjust headings if necessary */
+
+/* Optional: Ensure all headings use Manrope */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Manrope', sans-serif;
 }
 
 /* Header Styling */
@@ -97,4 +98,56 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Latest Posts Styling */
 .latest-posts {
-  padding: 
+  padding: 2em;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.latest-posts h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.latest-posts ul {
+  list-style: none;
+  padding: 0;
+}
+
+.latest-posts li {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.latest-posts a {
+  font-size: 1.2em;
+  color: #007acc;
+  text-decoration: none;
+}
+
+.latest-posts a:hover {
+  text-decoration: underline;
+}
+
+.post-date {
+  display: block;
+  font-size: 0.9em;
+  color: #777777;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .site-header, .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .site-footer {
+    position: static;
+  }
+}
