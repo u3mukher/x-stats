@@ -1,29 +1,29 @@
 /* assets/css/custom.css */
 
-/* Apply Manrope font to the entire site */
+/* Basic Setup */
 body {
   font-family: 'Manrope', sans-serif;
   margin: 0;
-  padding-top: 100px; /* Adjust based on header height */
-  padding-bottom: 60px; /* Adjust based on footer height */
+  padding-top: 100px; /* for the fixed header */
   line-height: 1.6;
   color: #333333;
   background-color: #ffffff;
+  overflow-x: hidden; /* Just in case */
 }
 
-/* Ensure all headings use Manrope */
+/* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Manrope', sans-serif;
   margin-bottom: 0.5em;
 }
 
-/* Header Styling */
+/* Header */
 .site-header {
   background-color: #ffffff;
   border-bottom: 1px solid #eaeaea;
   padding: 1em 2em;
   display: flex;
-  justify-content: space-between; /* Distributes space between branding and nav */
+  justify-content: space-between;
   align-items: center;
   position: fixed;
   width: 100%;
@@ -38,10 +38,9 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-/* Site Branding */
 .site-branding {
   display: flex;
-  flex-direction: column; /* Stack title and subtitle vertically */
+  flex-direction: column;
 }
 
 .site-branding .logo-link {
@@ -58,21 +57,23 @@ h1, h2, h3, h4, h5, h6 {
 .site-branding .site-title {
   font-size: 1.5em;
   color: #333333;
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
 
+/* If subtitle was too long previously, shorten or reduce font slightly */
 .site-subtitle {
   font-size: 0.9em;
   color: #666666;
-  margin-top: 0.25em; /* Small space above subtitle */
-  font-weight: normal; /* Ensure the subtitle is not bold */
+  margin-top: 0.25em;
+  font-weight: normal;
+  white-space: nowrap; /* Prevent wrapping */
 }
 
-/* Navigation Styling */
+/* Navigation */
 .site-nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5em;
+  gap: 1.5em; /* If still cut off, reduce to 1em */
   margin: 0;
   padding: 0;
 }
@@ -80,101 +81,61 @@ h1, h2, h3, h4, h5, h6 {
 .site-nav a {
   text-decoration: none;
   color: #333333;
-  font-weight: normal; /* Remove boldness */
+  font-weight: normal;
+  white-space: nowrap; /* Prevent wrapping onto multiple lines */
+  /* If items are cut off, try reducing font-size a bit:
+     font-size: 0.95em; */
 }
 
 .site-nav a:hover {
   color: #007acc;
 }
 
-/* Footer Styling */
+/* Footer - Not fixed now */
 .site-footer {
   background-color: #f8f8f8;
   border-top: 1px solid #eaeaea;
   padding: 1em 2em;
   text-align: center;
-  position: fixed;
   width: 100%;
-  bottom: 0;
 }
 
-.site-footer a {
-  color: #007acc;
-  text-decoration: none;
-}
-
-.site-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Latest Posts Styling */
-.latest-posts {
+/* Centralized Content in Main */
+main {
   padding: 4em 2em;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
-.latest-posts h2 {
-  text-align: center;
-  margin-bottom: 2em;
-  font-size: 2em;
-  color: #333333;
-}
-
-.posts-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-  justify-content: center;
-  align-items: center;
-}
-
-.post-item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.post-featured-image {
   width: 100%;
   max-width: 800px;
-  padding: 1em;
-  /* Remove box-like boundary */
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
+  margin: 0 auto 2em auto;
 }
 
-.post-item:hover {
-  transform: none;
-  box-shadow: none;
-}
-
-.post-image {
+.featured-image {
   width: 100%;
   height: auto;
-  border-radius: 4px;
-  margin-bottom: 1em;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.post-content {
+  padding: 0 1em;
 }
 
 .post-title {
-  font-size: 1.5em;
-  margin: 0.5em 0;
-  color: #333333; /* Changed from #007acc to dark gray */
+  font-size: 2em;
+  color: #333333;
   font-weight: bold;
-}
-
-.post-title a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.post-title a:hover {
-  text-decoration: underline;
+  margin-bottom: 0.5em;
 }
 
 .post-subtitle {
-  font-size: 1em;
+  font-size: 1.2em;
   color: #555555;
-  margin: 0.25em 0 0.5em 0;
   font-style: italic;
+  margin-bottom: 1em;
 }
 
 .post-excerpt {
@@ -182,53 +143,53 @@ h1, h2, h3, h4, h5, h6 {
   color: #555555;
   margin-bottom: 0.5em;
   text-align: left;
-  padding-left: 1em; /* Right indent */
-  width: 100%;
+  padding-left: 1em;
 }
 
 .post-date {
   font-size: 0.85em;
   color: #999999;
   text-align: left;
-  padding-left: 1em; /* Align with excerpt */
+  padding-left: 1em;
 }
 
-/* Centralized Content Layout */
-main {
-  padding: 4em 2em;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* Social Links Styling */
-.social-links {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 1em;
-}
-
-.social-links li a {
+.back-to-top {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #007acc;
+  color: #ffffff;
+  padding: 0.5em 0.8em;
+  border-radius: 4px;
   text-decoration: none;
-  color: #333333;
   font-size: 1.2em;
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  transition: color 0.3s ease;
+  display: none;
+  transition: background-color 0.3s ease;
+  z-index: 1001;
 }
 
-.social-links li a:hover {
-  color: #007acc;
+.back-to-top:hover {
+  background-color: #005fa3;
 }
 
-.social-links li a i {
-  font-size: 1em;
+@media (min-width: 768px) {
+  .back-to-top {
+    display: block;
+  }
 }
 
-/* Responsive Design */
+html {
+  scroll-behavior: smooth;
+}
+
+a:focus, a:hover {
+  outline: 2px solid #007acc;
+  outline-offset: 2px;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .site-header, .site-footer {
+  .site-header {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -236,18 +197,6 @@ main {
   .site-nav ul {
     flex-direction: column;
     gap: 0.5em;
-  }
-
-  .site-footer {
-    position: static;
-  }
-
-  .posts-container {
-    align-items: center;
-  }
-
-  .post-item {
-    max-width: 100%;
   }
 
   main {
