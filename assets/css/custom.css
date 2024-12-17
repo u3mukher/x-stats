@@ -1,17 +1,16 @@
 /* assets/css/custom.css */
 
-/* Basic Typography and Layout */
+/* Apply Manrope font to the entire site */
 body {
   font-family: 'Manrope', sans-serif;
   margin: 0;
-  padding-top: 100px; /* Adjust if header height changes */
-  /* Remove bottom padding since footer is no longer fixed */
+  padding-top: 100px; /* Adjust based on header height */
   line-height: 1.6;
   color: #333333;
   background-color: #ffffff;
-  overflow-x: hidden; /* Prevent horizontal scroll if something overflows */
 }
 
+/* Ensure headings use Manrope */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Manrope', sans-serif;
   margin-bottom: 0.5em;
@@ -25,18 +24,18 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed; 
   width: 100%;
   top: 0;
   z-index: 1000;
-  position: fixed;
 }
 
+/* Wrapper holds branding and nav side by side */
 .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  /* Ensure no minimum width constraints */
 }
 
 .site-branding {
@@ -51,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-branding .logo {
-  height: 35px;
+  height: 40px;
   margin-right: 0.5em;
 }
 
@@ -61,30 +60,19 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-/* Temporarily reduce or remove subtitle if space is an issue */
-/*
 .site-subtitle {
-  font-size: 0.85em;
+  font-size: 0.9em;
   color: #666666;
-  margin-top: 0.25em;
+  margin-top: 0.25em; 
   font-weight: normal;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-*/
-
-.site-nav {
-  display: flex;
 }
 
 .site-nav ul {
   list-style: none;
   display: flex;
-  gap: 1em; /* Keep gap small */
+  gap: 1.5em;
   margin: 0;
   padding: 0;
-  flex-wrap: nowrap;
 }
 
 .site-nav a {
@@ -92,26 +80,22 @@ h1, h2, h3, h4, h5, h6 {
   color: #333333;
   font-weight: normal;
   white-space: nowrap;
-  font-size: 0.9em; /* Smaller font to fit "About" */
 }
 
 .site-nav a:hover {
   color: #007acc;
 }
 
-/* Footer Styling */
-/* Remove fixed positioning so it only appears at bottom naturally */
+/* Footer Styling - No longer fixed */
 .site-footer {
   background-color: #f8f8f8;
   border-top: 1px solid #eaeaea;
   padding: 1em 2em;
   text-align: center;
-  /* position: fixed;  Remove this */
-  /* bottom: 0; Remove this */
   width: 100%;
 }
 
-/* Latest Posts */
+/* Latest Posts Styling */
 .latest-posts {
   padding: 4em 2em;
   max-width: 1200px;
@@ -153,7 +137,7 @@ h1, h2, h3, h4, h5, h6 {
 .post-image {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 8px; 
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   margin-bottom: 1em;
 }
@@ -199,9 +183,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Centralized Content Layout */
 main {
-  padding: 4em 2em;
-  max-width: 1000px;
-  margin: 0 auto;
+  padding: 4em 2em; 
+  max-width: 1000px; 
+  margin: 0 auto; 
 }
 
 .post-featured-image {
@@ -269,11 +253,6 @@ a:focus, a:hover {
     flex-direction: column;
     gap: 0.5em;
   }
-
-  /* If the subtitle was enabled and still causing issues on small screens */
-  /* .site-subtitle {
-    display: none;
-  } */
 
   main {
     padding: 4em 1em;
