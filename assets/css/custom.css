@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between; /* Distributes space between branding and nav */
   align-items: center;
-  position: fixed; /* Makes the header fixed */
+  position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
@@ -157,9 +157,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .post-title {
   font-size: 2em;
-  color: #333333;
+  margin: 0.5em 0;
+  color: #333333; /* Changed from #007acc to dark gray */
   font-weight: bold;
-  margin-bottom: 0.5em;
 }
 
 .post-title a {
@@ -175,7 +175,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.2em;
   color: #555555;
   font-style: italic;
-  margin-bottom: 1em;
+  margin: 0.25em 0 0.5em 0;
 }
 
 .post-excerpt {
@@ -213,6 +213,13 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 1em;
 }
 
+/* Centralized Content Layout */
+main {
+  padding: 4em 2em;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 /* Social Links Styling */
 .social-links {
   list-style: none;
@@ -237,44 +244,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .social-links li a i {
   font-size: 1em;
-}
-
-/* Back-to-Top Button Styling */
-.back-to-top {
-  position: fixed;
-  bottom: 80px; /* Adjust as needed */
-  right: 20px;
-  background-color: #007acc;
-  color: #ffffff;
-  padding: 0.5em 0.8em;
-  border-radius: 4px;
-  text-decoration: none;
-  font-size: 1.2em;
-  display: none; /* Hidden by default */
-  transition: background-color 0.3s ease;
-  z-index: 1001;
-}
-
-.back-to-top:hover {
-  background-color: #005fa3;
-}
-
-/* Show the button when scrolled down */
-@media (min-width: 768px) {
-  .back-to-top {
-    display: block;
-  }
-}
-
-/* Smooth Scroll */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Focus Styles for Links */
-a:focus, a:hover {
-  outline: 2px solid #007acc;
-  outline-offset: 2px;
 }
 
 /* Responsive Design */
