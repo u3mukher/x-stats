@@ -5,7 +5,7 @@ body {
   font-family: 'Manrope', sans-serif;
   margin: 0;
   padding-top: 100px; /* Adjust based on header height */
-  padding-bottom: 60px; /* Adjust based on footer height */
+  padding-bottom: 60px; /* If you have a fixed footer, adjust accordingly */
   line-height: 1.6;
   color: #333333;
   background-color: #ffffff;
@@ -23,19 +23,30 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid #eaeaea;
   padding: 1em 2em;
   display: flex;
-  justify-content: space-between; /* Distributes space between branding and nav */
+  justify-content: space-between; 
   align-items: center;
-  position: fixed; /* Makes the header fixed */
+  position: fixed; 
   width: 100%;
   top: 0;
   z-index: 1000;
 }
 
+/* Wrapper to hold branding and nav */
+.wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-width: 0; /* Allows flex items to shrink */
+}
+
 /* Site Branding */
 .site-branding {
   display: flex;
-  flex-direction: column; /* Stack title and subtitle vertically */
-  flex: 1; /* Allows site-branding to take available space */
+  flex-direction: column;
+  flex: 0 1 auto;
+  min-width: 0; 
 }
 
 .site-branding .logo-link {
@@ -45,44 +56,50 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-branding .logo {
-  height: 40px;
+  height: 35px; /* Slightly smaller to save space */
   margin-right: 0.5em;
 }
 
 .site-branding .site-title {
   font-size: 1.5em;
   color: #333333;
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
 
 .site-subtitle {
-  font-size: 0.9em;
+  font-size: 0.85em;
   color: #666666;
-  margin-top: 0.25em; /* Small space above subtitle */
-  font-weight: normal; /* Ensure the subtitle is not bold */
+  margin-top: 0.25em;
+  font-weight: normal;
+  white-space: nowrap; /* Prevent subtitle from wrapping; remove if needed */
+  overflow: hidden;
+  text-overflow: ellipsis; /* If subtitle is too long, it will be truncated */
 }
 
 /* Navigation Styling */
 .site-nav {
   display: flex;
-  flex: 1; /* Allows navigation to take available space */
-  justify-content: flex-end; /* Aligns navigation items to the right */
-  flex-shrink: 0; /* Prevents navigation from shrinking */
+  flex: 0 1 auto;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  min-width: 0; 
 }
 
 .site-nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5em;
+  gap: 1em; /* Reduced gap to ensure "About" fits */
   margin: 0;
   padding: 0;
-  flex-wrap: nowrap; /* Prevents navigation items from wrapping */
+  flex-wrap: nowrap;
 }
 
 .site-nav a {
   text-decoration: none;
   color: #333333;
-  font-weight: normal; /* Remove boldness */
+  font-weight: normal;
+  white-space: nowrap;
+  font-size: 0.9em; /* Slightly smaller to ensure items fit */
 }
 
 .site-nav a:hover {
@@ -138,7 +155,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   max-width: 800px;
   padding: 1em;
-  /* Remove box-like boundary */
   background-color: transparent;
   border: none;
   box-shadow: none;
@@ -152,8 +168,8 @@ h1, h2, h3, h4, h5, h6 {
 .post-image {
   width: 100%;
   height: auto;
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 1em;
 }
 
@@ -185,7 +201,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #555555;
   margin-bottom: 0.5em;
   text-align: left;
-  padding-left: 1em; /* Right indent */
+  padding-left: 1em; 
   width: 100%;
 }
 
@@ -193,36 +209,36 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.85em;
   color: #999999;
   text-align: left;
-  padding-left: 1em; /* Align with excerpt */
+  padding-left: 1em;
 }
 
 /* Centralized Content Layout */
 main {
-  padding: 4em 1em; /* Top/Bottom padding and Left/Right padding */
-  max-width: 1000px; /* Restricts the width for better readability */
-  margin: 0 auto; /* Centers the main content */
+  padding: 4em 2em; 
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /* Featured Image Styling */
 .post-featured-image {
   width: 100%;
-  max-width: 800px; /* Adjust as needed */
-  margin: 0 auto 2em auto; /* Centers the image and adds bottom margin */
+  max-width: 800px;
+  margin: 0 auto 2em auto;
 }
 
 .featured-image {
   width: 100%;
   height: auto;
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Post Content Styling */
 .post-content {
-  padding: 0 1em; /* Adds left and right padding */
+  padding: 0 1em; 
 }
 
-/* Social Links Styling */
+/* Social Links Styling (Optional) */
 .social-links {
   list-style: none;
   padding: 0;
@@ -248,10 +264,10 @@ main {
   font-size: 1em;
 }
 
-/* Back-to-Top Button Styling */
+/* Back-to-Top Button Styling (Optional) */
 .back-to-top {
   position: fixed;
-  bottom: 80px; /* Adjust as needed */
+  bottom: 80px; 
   right: 20px;
   background-color: #007acc;
   color: #ffffff;
@@ -259,7 +275,7 @@ main {
   border-radius: 4px;
   text-decoration: none;
   font-size: 1.2em;
-  display: none; /* Hidden by default */
+  display: none; 
   transition: background-color 0.3s ease;
   z-index: 1001;
 }
@@ -268,7 +284,6 @@ main {
   background-color: #005fa3;
 }
 
-/* Show the button when scrolled down */
 @media (min-width: 768px) {
   .back-to-top {
     display: block;
@@ -313,5 +328,9 @@ a:focus, a:hover {
   main {
     padding: 4em 1em;
     max-width: 100%;
+  }
+
+  .site-subtitle {
+    display: none; /* Hide subtitle on smaller screens if needed to ensure nav fits */
   }
 }
