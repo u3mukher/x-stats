@@ -1,31 +1,31 @@
 /* assets/css/custom.css */
 
-/* Basic Setup */
+/* Apply Manrope font to the entire site */
 body {
   font-family: 'Manrope', sans-serif;
   margin: 0;
-  padding-top: 100px; /* for the fixed header */
+  padding-top: 100px; /* Adjust based on header height */
+  padding-bottom: 60px; /* Adjust based on footer height */
   line-height: 1.6;
   color: #333333;
   background-color: #ffffff;
-  overflow-x: hidden; /* Just in case */
 }
 
-/* Headings */
+/* Ensure all headings use Manrope */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Manrope', sans-serif;
   margin-bottom: 0.5em;
 }
 
-/* Header */
+/* Header Styling */
 .site-header {
   background-color: #ffffff;
   border-bottom: 1px solid #eaeaea;
   padding: 1em 2em;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Distributes space between branding and nav */
   align-items: center;
-  position: fixed;
+  position: fixed; /* Makes the header fixed */
   width: 100%;
   top: 0;
   z-index: 1000;
@@ -38,9 +38,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
+/* Site Branding */
 .site-branding {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Stack title and subtitle vertically */
 }
 
 .site-branding .logo-link {
@@ -57,23 +58,21 @@ h1, h2, h3, h4, h5, h6 {
 .site-branding .site-title {
   font-size: 1.5em;
   color: #333333;
-  margin: 0;
+  margin: 0; /* Remove default margin */
 }
 
-/* If subtitle was too long previously, shorten or reduce font slightly */
 .site-subtitle {
   font-size: 0.9em;
   color: #666666;
-  margin-top: 0.25em;
-  font-weight: normal;
-  white-space: nowrap; /* Prevent wrapping */
+  margin-top: 0.25em; /* Small space above subtitle */
+  font-weight: normal; /* Ensure the subtitle is not bold */
 }
 
-/* Navigation */
+/* Navigation Styling */
 .site-nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5em; /* If still cut off, reduce to 1em */
+  gap: 1.5em;
   margin: 0;
   padding: 0;
 }
@@ -81,47 +80,79 @@ h1, h2, h3, h4, h5, h6 {
 .site-nav a {
   text-decoration: none;
   color: #333333;
-  font-weight: normal;
-  white-space: nowrap; /* Prevent wrapping onto multiple lines */
-  /* If items are cut off, try reducing font-size a bit:
-     font-size: 0.95em; */
+  font-weight: normal; /* Remove boldness */
 }
 
 .site-nav a:hover {
   color: #007acc;
 }
 
-/* Footer - Not fixed now */
+/* Footer Styling */
 .site-footer {
   background-color: #f8f8f8;
   border-top: 1px solid #eaeaea;
   padding: 1em 2em;
   text-align: center;
+  position: fixed;
   width: 100%;
+  bottom: 0;
 }
 
-/* Centralized Content in Main */
-main {
+.site-footer a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Latest Posts Styling */
+.latest-posts {
   padding: 4em 2em;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.post-featured-image {
+.latest-posts h2 {
+  text-align: center;
+  margin-bottom: 2em;
+  font-size: 2em;
+  color: #333333;
+}
+
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   width: 100%;
   max-width: 800px;
-  margin: 0 auto 2em auto;
+  padding: 1em;
+  /* Remove box-like boundary */
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
 }
 
-.featured-image {
+.post-item:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.post-image {
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.post-content {
-  padding: 0 1em;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-bottom: 1em;
 }
 
 .post-title {
@@ -129,6 +160,15 @@ main {
   color: #333333;
   font-weight: bold;
   margin-bottom: 0.5em;
+}
+
+.post-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-title a:hover {
+  text-decoration: underline;
 }
 
 .post-subtitle {
@@ -143,19 +183,66 @@ main {
   color: #555555;
   margin-bottom: 0.5em;
   text-align: left;
-  padding-left: 1em;
+  padding-left: 1em; /* Right indent */
+  width: 100%;
 }
 
 .post-date {
   font-size: 0.85em;
   color: #999999;
   text-align: left;
-  padding-left: 1em;
+  padding-left: 1em; /* Align with excerpt */
 }
 
+/* Featured Image Styling */
+.post-featured-image {
+  width: 100%;
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto 2em auto; /* Centers the image and adds bottom margin */
+}
+
+.featured-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Post Content Styling */
+.post-content {
+  padding: 0 1em;
+}
+
+/* Social Links Styling */
+.social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1em;
+}
+
+.social-links li a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  transition: color 0.3s ease;
+}
+
+.social-links li a:hover {
+  color: #007acc;
+}
+
+.social-links li a i {
+  font-size: 1em;
+}
+
+/* Back-to-Top Button Styling */
 .back-to-top {
   position: fixed;
-  bottom: 80px;
+  bottom: 80px; /* Adjust as needed */
   right: 20px;
   background-color: #007acc;
   color: #ffffff;
@@ -163,7 +250,7 @@ main {
   border-radius: 4px;
   text-decoration: none;
   font-size: 1.2em;
-  display: none;
+  display: none; /* Hidden by default */
   transition: background-color 0.3s ease;
   z-index: 1001;
 }
@@ -172,24 +259,27 @@ main {
   background-color: #005fa3;
 }
 
+/* Show the button when scrolled down */
 @media (min-width: 768px) {
   .back-to-top {
     display: block;
   }
 }
 
+/* Smooth Scroll */
 html {
   scroll-behavior: smooth;
 }
 
+/* Focus Styles for Links */
 a:focus, a:hover {
   outline: 2px solid #007acc;
   outline-offset: 2px;
 }
 
-/* Responsive Adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
-  .site-header {
+  .site-header, .site-footer {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -197,6 +287,18 @@ a:focus, a:hover {
   .site-nav ul {
     flex-direction: column;
     gap: 0.5em;
+  }
+
+  .site-footer {
+    position: static;
+  }
+
+  .posts-container {
+    align-items: center;
+  }
+
+  .post-item {
+    max-width: 100%;
   }
 
   main {
