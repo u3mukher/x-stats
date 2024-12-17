@@ -61,25 +61,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-subtitle {
-  font-size: 0.9em;
-  color: #666666;
-  margin-top: 0.25em; 
-  font-weight: normal;
+  display: none; /* Temporarily hide to see if About fits */
 }
 
 .site-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5em;
-  margin: 0;
-  padding: 0;
+  gap: 1em; /* Reduce gap */
 }
 
 .site-nav a {
-  text-decoration: none;
-  color: #333333;
-  font-weight: normal;
-  white-space: nowrap;
+  font-size: 0.9em; /* Smaller font if needed */
+  padding: 0 0.5em; /* Reduce padding */
 }
 
 .site-nav a:hover {
