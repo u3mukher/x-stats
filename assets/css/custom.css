@@ -59,75 +59,52 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-/* Hamburger Menu Styles */
-.menu-toggle-checkbox {
-  display: none;
+/* Top link (just Blog) */
+.top-link {
+  /* Ensures the "Blog" link is positioned on the right */
 }
-
-.menu-toggle-label {
-  display: inline-block;
-  cursor: pointer;
-  width: 30px;
-  height: 22px;
-  position: relative;
-  margin-left: auto;
-}
-
-.menu-line {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: #333;
-  margin-bottom: 5px;
-}
-
-.menu-line:last-child {
-  margin-bottom: 0;
-}
-
-/* Custom Nav */
-.custom-nav {
-  display: none;
-}
-
-.menu-toggle-checkbox:checked ~ .custom-nav {
-  display: block;
-  position: absolute;
-  top: 60px; /* slightly below header */
-  right: 0;
-  background-color: #ffffff;
-  border: 1px solid #eaeaea;
-  padding: 1em;
-}
-
-.custom-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-
-.custom-nav a {
+.blog-link {
   text-decoration: none;
-  color: #333333;
+  color: #333333; /* black text */
   font-weight: normal;
   white-space: nowrap;
-  font-size: 0.95em; /* Adjust if needed */
+  font-size: 1em;
 }
-
-.custom-nav a:hover {
+.blog-link:hover {
   color: #007acc;
 }
 
-/* Footer (Not Fixed) */
+/* Footer - not fixed */
 .site-footer {
   background-color: #f8f8f8;
   border-top: 1px solid #eaeaea;
   padding: 1em 2em;
-  text-align: center;
   width: 100%;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Left text and right link in footer */
+.footer-left p {
+  margin: 0;
+}
+.footer-right {
+  text-align: right;
+}
+
+.about-link {
+  text-decoration: none;
+  color: #333333; /* black text */
+  font-weight: normal;
+  font-size: 1em;
+}
+.about-link:hover {
+  color: #007acc;
 }
 
 /* Main Content Centering */
@@ -197,12 +174,11 @@ main {
   transition: background-color 0.3s ease;
   z-index: 1001;
 }
-
 .back-to-top:hover {
   background-color: #005fa3;
 }
 
-/* Show Back-to-Top button always */
+/* Show Back-to-Top on larger screens */
 @media (min-width: 768px) {
   .back-to-top {
     display: block;
@@ -217,6 +193,3 @@ a:focus, a:hover {
   outline: 2px solid #007acc;
   outline-offset: 2px;
 }
-
-/* Responsive Adjustments */
-/* No special adjustments needed since always showing hamburger menu */
