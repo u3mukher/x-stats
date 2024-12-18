@@ -13,19 +13,19 @@ minima:
     github: u3mukher
 
 # SEO and analytics (optional)
-timezone: America/Toronto # Replace with your timezone
-lang: en # Replace with your preferred language
+timezone: America/Toronto
+lang: en
 
 # Markdown and content settings
 markdown: kramdown
 highlighter: rouge
 
-# Navigation bar
-nav_links:
-  - title: Blog
-    url: /blog/
-  - title: About
-    url: /about/
+# Remove nav_links to avoid minima default nav
+# nav_links:
+#   - title: Blog
+#     url: /blog/
+#   - title: About
+#     url: /about/
 
 # Additional plugins (optional)
 plugins:
@@ -42,7 +42,5 @@ exclude:
   - node_modules
   - vendor/bundle/
 
-# Build settings
-# Removed remote_theme to avoid conflict
 github:
   is_project_page: true
