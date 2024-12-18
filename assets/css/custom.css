@@ -21,9 +21,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #ffffff;
   border-bottom: 1px solid #eaeaea;
   padding: 1em 2em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
   width: 100%;
   top: 0;
@@ -32,79 +29,49 @@ h1, h2, h3, h4, h5, h6 {
 
 .wrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
+  gap: 0.5em; /* Small gap between elements */
 }
 
-.site-branding {
-  display: flex;
-  flex-direction: column;
-}
-
-.site-branding .logo-link {
+.logo-link {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
 
-.site-branding .logo {
+.logo {
   height: 40px;
   margin-right: 0.5em;
 }
 
-.site-branding .site-title {
+.site-title {
   font-size: 1.5em;
   color: #333333;
   margin: 0;
 }
 
-/* Top link (just Blog) */
-.top-link {
-  /* Ensures the "Blog" link is positioned on the right */
-}
-.blog-link {
-  text-decoration: none;
-  color: #333333; /* black text */
-  font-weight: normal;
-  white-space: nowrap;
+.header-links {
   font-size: 1em;
-}
-.blog-link:hover {
-  color: #007acc;
+  color: #333333;
+  white-space: nowrap;
 }
 
-/* Footer - not fixed */
+.header-links a {
+  text-decoration: none;
+  color: #333333; /* Black text */
+  font-weight: normal;
+}
+.header-links a:hover {
+  text-decoration: underline; /* Optional hover effect */
+}
+
+/* Footer (if unchanged, remains not pinned) */
 .site-footer {
   background-color: #f8f8f8;
   border-top: 1px solid #eaeaea;
   padding: 1em 2em;
   width: 100%;
   text-align: center;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Left text and right link in footer */
-.footer-left p {
-  margin: 0;
-}
-.footer-right {
-  text-align: right;
-}
-
-.about-link {
-  text-decoration: none;
-  color: #333333; /* black text */
-  font-weight: normal;
-  font-size: 1em;
-}
-.about-link:hover {
-  color: #007acc;
 }
 
 /* Main Content Centering */
@@ -117,7 +84,7 @@ main {
 .post-featured-image {
   width: 100%;
   max-width: 800px;
-  margin: 0 auto 2em auto;
+  margin: 0 auto 2em;
 }
 
 .featured-image {
@@ -174,11 +141,11 @@ main {
   transition: background-color 0.3s ease;
   z-index: 1001;
 }
+
 .back-to-top:hover {
   background-color: #005fa3;
 }
 
-/* Show Back-to-Top on larger screens */
 @media (min-width: 768px) {
   .back-to-top {
     display: block;
