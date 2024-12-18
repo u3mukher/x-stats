@@ -7,8 +7,8 @@
 <style>
     #hover-info {
         position: absolute;
-        top: 150px; /* Adjust this to move the box up/down */
-        right: 200px; /* Adjust this to move the box left/right relative to pitch */
+        top: 170px; /* Adjust this to move the box up/down */
+        right: -200px; /* Adjust this to move the box left/right relative to pitch */
         width: 300px;
         padding: 15px;
         background-color: transparent;
@@ -45,8 +45,8 @@
 
             // Update the fixed text box on hover
             hoverInfo.innerHTML = `<b>Expected Disruption (xD):</b> ${z.toFixed(6)}<br>` +
-                                  `When a defender successfully performs a defensive action in this zone, ` +
-                                  `they reduce the opponent's chance of scoring in the next 5 actions by ${percentage}%.`;
+                                  `A defender's possession winning action in this zone, ` +
+                                  `reduces the opponent's chance of scoring in the next 5 actions by ${percentage}%.`;
 
             // Calculate the boundaries of the hovered zone
             var x_center = point.x;
