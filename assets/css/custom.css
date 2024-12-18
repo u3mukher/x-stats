@@ -30,24 +30,6 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper {
   display: flex;
   align-items: center;
-  gap: 0.5em; /* Small gap between elements */
-}
-
-.logo-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-.logo {
-  height: 40px;
-  margin-right: 0.5em;
-}
-
-.site-title {
-  font-size: 1.5em;
-  color: #333333;
-  margin: 0;
 }
 
 .header-links {
@@ -58,14 +40,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-links a {
   text-decoration: none;
-  color: #333333; /* Black text */
+  color: #333333;
   font-weight: normal;
-}
-.header-links a:hover {
-  text-decoration: underline; /* Optional hover effect */
+  font-size: 1em;
 }
 
-/* Footer (if unchanged, remains not pinned) */
+.header-links a:hover {
+  text-decoration: underline;
+}
+
+/* Footer (if unchanged) */
 .site-footer {
   background-color: #f8f8f8;
   border-top: 1px solid #eaeaea;
@@ -84,7 +68,7 @@ main {
 .post-featured-image {
   width: 100%;
   max-width: 800px;
-  margin: 0 auto 2em;
+  margin: 0 auto 2em auto;
 }
 
 .featured-image {
@@ -146,6 +130,7 @@ main {
   background-color: #005fa3;
 }
 
+/* Show Back-to-Top on larger screens */
 @media (min-width: 768px) {
   .back-to-top {
     display: block;
