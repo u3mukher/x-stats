@@ -1,14 +1,13 @@
 <!-- _includes/header.html -->
 <header class="site-header" role="banner">
   <div class="wrapper">
-    <div class="site-branding">
-      <a href="{{ '/' | relative_url }}" class="logo-link">
-        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo" class="logo">
-        <span class="site-title">x-stats</span>
-      </a>
-    </div>
-    <div class="top-link">
-      <a href="{{ '/blog/' | relative_url }}" class="blog-link">Blog</a>
-    </div>
+    <a href="{{ '/' | relative_url }}" class="logo-link">
+      <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo" class="logo">
+      <span class="site-title">x-stats</span>
+    </a>
+    <span class="header-links">
+      | <a href="{{ '/blog/' | relative_url }}" class="blog-link">Blog</a> | 
+      <a href="{{ '/about/' | relative_url }}" class="about-link">About</a>
+    </span>
   </div>
 </header>
