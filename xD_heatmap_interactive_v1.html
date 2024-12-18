@@ -7,8 +7,8 @@
 <style>
     #hover-info {
         position: absolute;
-        top: 200px; /* Adjust this value to move the box up/down */
-        right: 1px; /* Adjust this value to move the box left/right */
+        top: 175px; /* Adjust this value to move the box up/down */
+        right: 20px; /* Adjust this value to move the box left/right */
         width: 300px;
         padding: 15px;
         /* Remove background and border */
@@ -22,7 +22,7 @@
 
 <div id="hover-info">
     Expected Disruption (xD) = Insert Value<br>
-    When a defender successfully performs a defensive action in this zone, they reduce the opponent's chance of scoring in the next 5 actions by X%.
+    A defender's possession winning action in this zone, reduces the opponent's chance of scoring in the next 5 actions by X%.
 </div>
 
 <script>
@@ -47,8 +47,8 @@
 
             // Update the fixed text box
             hoverInfo.innerHTML = `<b>Expected Disruption (xD):</b> ${z.toFixed(6)}<br>` +
-                                  `When a defender successfully performs a defensive action in this zone, ` +
-                                  `they reduce the opponent's chance of scoring in the next 5 actions by ${percentage}%.`;
+                                  `A defender's possession winning action in this zone, ` +
+                                  `reduces the opponent's chance of scoring in the next 5 actions by ${percentage}%.`;
 
             // Calculate the boundaries of the hovered zone
             var x_center = point.x;
@@ -72,7 +72,7 @@
     plot.on('plotly_unhover', function(data){
         // Reset the fixed text box
         hoverInfo.innerHTML = `Expected Disruption (xD) = Insert Value<br>` +
-                              `When a defender successfully performs a defensive action in this zone, they reduce the opponent's chance of scoring in the next 5 actions by X%.`;
+                              `A defender's possession winning action in this zone, reduces the opponent's chance of scoring in the next 5 actions by X%.`;
 
         // Clear the hover-outline trace
         if(hoverOutlineTraceIndex !== null){
