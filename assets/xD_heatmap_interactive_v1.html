@@ -7,7 +7,7 @@
 <style>
     #hover-info {
         position: absolute;
-        top: 140px; /* Adjust this to move the box up/down, decreasing moves it up */
+        top: 155px; /* Adjust this to move the box up/down, decreasing moves it up */
         right: 60px; /* Adjust this to move the box left/right relative to pitch, increasing moves text closer to pitch */
         width: 200px;
         padding: 10px;
@@ -44,11 +44,14 @@
             var percentage = (z * 100).toFixed(2);
 
             // Update the fixed text box on hover
-            hoverInfo.innerHTML = `<b>Expected Disruption (xD):</b>` +
-                      `<div style="text-align: justify;">
-                         A defender's possession winning action in this zone,
-                         reduces the opponent's chance of scoring in the next 5 actions by ${percentage}%.
-                       </div>`;
+            hoverInfo.innerHTML = `
+            <b>Expected Disruption (xD):</b>
+            <div style="text-align: justify; font-weight: normal;">
+            A defender's possession winning action in this zone,
+            reduces the opponent's chance of scoring in the next 5 actions by ${percentage}%.
+            </div>
+            `;
+
 
 
             // Calculate the boundaries of the hovered zone
