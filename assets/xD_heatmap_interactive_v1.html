@@ -7,7 +7,7 @@
 <style>
     #hover-info {
         position: absolute;
-        top: 155px; /* Adjust this to move the box up/down, decreasing moves it up */
+        top: 160px; /* Adjust this to move the box up/down, decreasing moves it up */
         right: 60px; /* Adjust this to move the box left/right relative to pitch, increasing moves text closer to pitch */
         width: 200px;
         padding: 10px;
@@ -46,11 +46,12 @@
             // Update the fixed text box on hover
             hoverInfo.innerHTML = `
             <b>Expected Disruption (xD):</b>
-            <div style="text-align: justify; font-weight: normal;">
+            <div style="font-weight: normal; text-align: left;">
             A defender's possession winning action in this zone,
             reduces the opponent's chance of scoring in the next 5 actions by ${percentage}%.
             </div>
             `;
+
 
 
 
