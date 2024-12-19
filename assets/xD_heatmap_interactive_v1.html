@@ -7,8 +7,8 @@
 <style>
     #hover-info {
         position: absolute;
-        top: 155px; /* Adjust this to move the box up/down, decreasing moves it up */
-        right: 55px; /* Adjust this to move the box left/right relative to pitch, increasing moves text closer to pitch */
+        top: 135px; /* Adjust this to move the box up/down, decreasing moves it up */
+        right: 65px; /* Adjust this to move the box left/right relative to pitch, increasing moves text closer to pitch */
         width: 200px;
         padding: 10px;
         background-color: transparent;
@@ -44,7 +44,7 @@
             var percentage = (z * 100).toFixed(2);
 
             // Update the fixed text box on hover
-            hoverInfo.innerHTML = `<b>Expected Disruption (xD):</b> ${z.toFixed(6)}<br>` +
+            hoverInfo.innerHTML = `<b>Expected Disruption (xD):` +
                                   `A defender's possession winning action in this zone, ` +
                                   `reduces the opponent's chance of scoring in the next 5 actions by ${percentage}%.`;
 
