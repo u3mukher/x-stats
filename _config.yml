@@ -13,10 +13,16 @@ timezone: America/Toronto
 lang: en
 
 markdown: kramdown
-kramdown:
-  input: GFM
-  parse_block_html: true
+highlighter: rouge
 
+# Enable math rendering via kramdown + MathJax
+kramdown:
+  input: GFM              # GitHub Flavored Markdown
+  math_engine: mathjax    # Use MathJax for rendering math
+  math_engine_opts:
+    # autoprefix adds backslashes if needed for certain LaTeX macros
+    # you can include other options if desired
+    autoprefix: true
 
 plugins:
   - jekyll-feed
@@ -33,4 +39,3 @@ exclude:
 
 github:
   is_project_page: true
-
