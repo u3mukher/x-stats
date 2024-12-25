@@ -7,18 +7,62 @@
   <title>{{ page.title }} | {{ site.title }}</title>
 
   <!-- Manrope Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
 
   <!-- (Optional) Font Awesome -->
-  <link rel="stylesheet"
+  <link
+    rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-p6Kfd7zGfy5l4/kC0L+5FtD8L8VxVVkXjXqF8F8f9Xo+o+KMXQuB8LM7+QjhCcw8VZs7JV5/l2t10hX21UPQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 
+  <!-- Your Custom CSS -->
   <link rel="stylesheet" href="{{ "/assets/css/custom.css" | relative_url }}">
-  {{ content_for_header }}
 
+  <!-- KaTeX CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
+    integrity="sha384-4w+FtCTINjPp1D3jOVuO4zjoUSlhsR3TPx0lXRliJ379lY1HFllG53S8dK5z1cZE"
+    crossorigin="anonymous"
+  />
+
+  <!-- KaTeX JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"
+    integrity="sha384-eMuD65p5CUAoyZ6G0lZloJJvf4C671tqOb+hgbMcMkKeQPbUIV0PEs8gOqZNB6sx"
+    crossorigin="anonymous">
+  </script>
+
+  <!-- KaTeX Auto-Render Extension -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+    integrity="sha384-6SXrN6KD3rIt80grSEFaFpEiSCkWH1fS41ZTF/tO2f/OGJrxftd6l7ktSCS2YUwO"
+    crossorigin="anonymous">
+  </script>
+
+  <!-- Initialize KaTeX Auto-Render -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "\\[", right: "\\]", display: true },
+          { left: "$",  right: "$",  display: false },
+          { left: "\\(", right: "\\)", display: false }
+        ]
+      });
+    });
+  </script>
+
+  {{ content_for_header }}
   {% seo %}
+
 </head>
 <body>
   {% include header.html %}
