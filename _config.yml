@@ -24,6 +24,15 @@ kramdown:
     # you can include other options if desired
     autoprefix: true
 
+defaults:
+  - 
+    scope:
+      path: ""     # Empty means all files in the project
+      type: "posts"
+    values:
+      layout: "default"
+
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
