@@ -171,16 +171,5 @@ img {
 .chart-image figcaption {
   font-size: 0.9em;
   color: #555555;
-}
-
-.chart-image figcaption strong {
-  display: block;
-  font-size: 1em;
-}
-
-.chart-image figcaption em {
-  display: block;
-  margin-top: 0.2em;
-  font-style: italic;
-  color: #777777;
+  margin-top: 0.5em;
 }
